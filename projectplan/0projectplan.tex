@@ -1,0 +1,216 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx,amssymb, amstext, amsmath, epstopdf, booktabs, verbatim, gensymb, geometry, appendix, natbib, lmodern}
+\geometry{letterpaper}
+%\usepackage{garamond}
+
+\newcommand*\Title{Smart Fridge Kitchen Assistant}
+\newcommand*\cpiType{\textit{Project Plan}}
+\newcommand*\Date{October 2016}
+\newcommand*\Author{}
+\title{\Title}
+\author{Ahmed Humayun\\ Zhen Li\\Sai Sivva\\Joshua Wilson\\Shu Yang}
+\date{\today}
+%-----------------------------------------------------------
+
+\usepackage{cpistuff/cpi} % This is what makes your document look like a cpi document.
+\usepackage{array}
+\usepackage{pgfgantt}
+\usepackage{tikz}
+\usepackage{lscape}
+\begin{document}
+\rmfamily
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\linespread{1.15} %Set standard document linespacing
+
+
+
+
+\section{Introduction}
+
+The aim of this document is to provide information about the projected development of the \textit{Smart Fridge: Kitchen Assistant and Inventory Management System}.  It includes deliverables, schedules, dependencies, assumptions, estimates, project team, and change management.
+
+\section{Software Project Description }
+\subsection{Original Product Description}
+\begin{description}
+	\item {\itshape\bfseries Web Server Implementation} facilitates platform independence and allows for multiple users.
+	\item {\itshape\bfseries Shopping List Management} allows users to create a shopping list. Items in the refrigerator are automatically added to the shopping list when low. 
+	\item {\itshape\bfseries Inventory Management} allows users to keep track of the food in their refrigerator, and moves items from shopping list to inventory after food is purchased. 
+	\item {\itshape\bfseries Recipe Suggestions} provide recipes based off of food currently in the fridge and link to instructional videos from YouTube to assist with cooking. 
+\end{description}
+
+\subsection{Description of Requirements}
+\begin{description}
+		\item {\itshape\bfseries Energy Saver} will recommend an optimized temperature given the contents of the refrigerator. This can be interfaced with an automatic temperature control system or may be displayed to the user so that the user can set the temperature manually.  
+		\item {\itshape\bfseries Waste Approximation} will estimate the amount of money lost on purchasing and refrigerating spoiled food as well as the total mass of the spoiled food.
+		\item {\itshape\bfseries Generalized Inventory System} will allow for the inclusion of several different types of inventories such as refrigerator, pantry, spice cabinet, and medicine cabinet.
+		\item {\itshape\bfseries Bulk Update System} will parse receipts, obtain nutritional information about items, and add items directly to the appropriate generalized inventory. 
+		\item {\itshape\bfseries User Interface Refinement} will allow for the user to more easily add and subtract individual items from their inventories. The UI will also include information from the Waste Approximation and Energy Saver Modules. 
+\end{description}
+
+The requirements listed above are assumed to be all requirements to be requested by the client. 
+%\begin{itemize}
+%	\item Energy Saver
+%	\item Waste Approximation
+%	\item Generalize Inventory System 
+%	\item Bulk Update
+%		\subitem -- Receipt Parser
+%			\subsubitem - Image Manipulation (ImageMagick)
+%			\subsubitem - OCR (Tesseract)
+%		\subitem -- UPC to Nutritional Information  (Nutritionix)
+%	\item GUI Refinement
+%		\subitem -- Individual Add
+%		\subitem -- Individual Remove
+%		\subitem -- Bulk Remove 
+%\end{itemize}
+
+
+\section{Team Members}
+{\ttfamily
+	\begin{center}
+\begin{tabular*}{\textwidth}{ m{15em} m{20em}  }		
+	\toprule			
+	Name  & Background \\
+	\bottomrule
+	\toprule
+	Ahmed Humayun& C, HTML, Python, Data Analysis\\
+	Zhen Li& Python, Raspberry Pi\\
+	Sai Sivva&  EE, Front-End, Database \\
+	Joshua Wilson&  Python, UNIX, OpenCL\\
+	Shu Yang & EE, Java SE, Networks \\
+	\hline		
+\end{tabular*}
+\end{center}
+}
+\pagebreak 
+\section{Responsibility Assignments}
+{\ttfamily
+	\begin{center}
+		\begin{tabular*}{\textwidth}{ m{5em} m{20em}  }		
+			\toprule			
+			Name  & Assignments \\
+			\bottomrule
+			\toprule
+			Ahmed& Personalized Health Plan\\
+			Li & UPC/Data Conversion via Nutritionix, \\
+			Sai & EE, Front-End, Database Manipulation\\
+			Josh &  Project Management, Receipt Parsing \\
+			Shu  & EE, Java SE, Networks \\
+			\hline		
+		\end{tabular*}
+	\end{center}
+}
+
+\section{Deliverables}
+\begin{itemize}
+	\item Project Plan
+	\item Requirements Document
+	\item Design Document
+	\item Test Plan
+	\item Project Demo
+\end{itemize}
+
+\section{Potential Difficulties}
+\begin{itemize}
+	\item JavaEE to Python interface
+	\item Image Processing Power on Raspberry Pi is limited
+\end{itemize}
+\section{Resources}
+\begin{itemize}
+	\item Apache HTTP Server
+	\item Programming Languages
+	\subitem -- JavaEE
+	\subitem -- Python 
+	\subitem -- SQL
+	
+	\item APIs
+	\subitem -- Nutritionix
+	\subitem -- ImageMagick
+	\subitem -- Tesseract
+\end{itemize}
+
+\section{Project Timeline}
+On the next page is a Gantt chart detailing the schedule and current progress. 
+\pagebreak
+\definecolor{cpiOrange}{RGB}{203, 51, 59}
+\definecolor{ReflexBlue}{RGB}{0, 48, 135}
+\begin{landscape}
+	\noindent\resizebox{9in}{!}{
+		\begin{tikzpicture}[x=.5cm, y=1cm]
+		\begin{ganttchart}[vgrid, hgrid,bar/.append style={fill=cpiOrange},progress label text={},group/.append style={draw=black, fill=ReflexBlue},link/.style={->, ultra thick,black!65}]{1}{64} % 50 weeks
+		\gantttitle{September}{23}
+		\gantttitle{October}{31} 
+		\gantttitle{November}{10} \\ 
+		\gantttitlelist{8,...,30}{1} 
+		\gantttitlelist{1,...,31}{1} 
+		\gantttitlelist{1,...,10}{1} \\
+		\ganttbar[progress=100]{Project Plan}{1}{12} \\
+		\ganttmilestone{Project Plan Document}{13} \\ 
+		\\
+		\ganttgroup{Requirements}{6}{29} \\    
+		\ganttbar[progress = 85]{Determine Requirements}{6}{26} \\    
+		\ganttbar[progress = 0]{Determine Requirements}{27}{28} \\    
+		\ganttmilestone{Requirements Document}{29} \\ 
+		\\
+		\ganttbar[progress = 50]{Analysis \& Design}{8}{30} \\  
+		\\
+		\ganttgroup{Implementation}{13}{48} \\    
+		\ganttbar[progress = 10]{Energy Saver}{13}{46}\\
+		\ganttbar[progress = 20]{Waste Approximation}{13}{46}\\
+		\ganttbar[progress = 20]{Generalized Inventory System}{13}{46}\\
+		\ganttbar[progress = 50]{Bulk Update}{13}{46}\\
+		\ganttbar[progress = 5]{User Interface}{13}{46}\\
+		\ganttmilestone{Finalize Development}{48} \\ 
+		\\
+		\ganttgroup{Testing}{13}{59} \\  
+		\ganttbar[progress = 0]{Normal Testing}{13}{46}\\
+		\ganttbar[progress = 0]{Regressive Testing}{46}{59}\\
+		\ganttmilestone{Project Demontration}{61}
+		
+		\begin{scope}
+		\ganttlink{elem0}{elem1}
+		\ganttlink{elem1}{elem3}
+		\ganttlink{elem3}{elem4}
+		\ganttlink{elem4}{elem5}
+		\ganttlink{elem5}{elem6}
+		\ganttlink[link mid=0.35]{elem6}{elem8}
+		\ganttlink[link mid=0.26]{elem6}{elem9}
+		\ganttlink[link mid=0.21]{elem6}{elem10}
+		\ganttlink[link mid=0.175]{elem6}{elem11}
+		\ganttlink[link mid=0.15]{elem6}{elem12}
+		\ganttlink{elem8}{elem13}
+		\ganttlink{elem9}{elem13}
+		\ganttlink{elem10}{elem13}
+		\ganttlink{elem11}{elem13}
+		\ganttlink{elem12}{elem13}
+		\ganttlink{elem13}{elem15}
+		\ganttlink{elem15}{elem16}
+		\ganttlink{elem16}{elem17}
+		\end{scope}
+		%\ganttlink[b-m]{6}{3}{6}{4}
+		%\ganttlink[m-b]{6}{4}{7}{5}
+		\end{ganttchart}
+		\end{tikzpicture}
+	}
+\end{landscape}
+
+
+
+\section*{Revision History}
+{\ttfamily\begin{center}
+\begin{tabular*}{\textwidth}{ m{4em} m{5em} m{25em} m{4em}  }		
+	\toprule			
+	Rev.\# & Date & Nature of Revision & Version \\
+	\bottomrule
+	\toprule
+	1 & 09.14.2016 & ORIGINAL VERSION & 1.0\\
+	\hline		
+\end{tabular*}
+\end{center}
+}
+
+
+
+\end{document}
