@@ -1,0 +1,65 @@
+.welcome {
+  font-family: Verdana;
+  text-align: center;
+}
+
+body{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.fridgeImage {
+  text-align: center;
+  border: solid;
+  border-width: 5px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.loginButton, .newAccountButton, .aboutButton{
+  float: center;
+  text-align: center;
+  padding: 1%;
+  border-width: 31.3%;
+  margin: 1%;
+  font-family: Verdana;
+  /*background-color: #efefef;*/
+}
+
+.aboutButton{
+  float: center;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  border-width: 31.3%;
+
+  margin: 1%;
+  font-family: Verdana;
+  /*background-color: #efefef;*/
+}
+
+.jumbotron{
+  margin-left: 3%;
+}
+
+
+
+.buttons{
+  text-align: left;
+  margin-left: 3%;
+/*border: solid;
+  border-width: 1px;
+  border-left: 0px;
+  border-right: 0px;*/
+}
+
+div.container2{
+    width: 80%; /* for example */
+    margin: auto;
+}
+
+.carousel-caption{
+	background-color: rgba(255, 255, 255, .5);
+	border-top: 1%;
+	color: black;
+}
