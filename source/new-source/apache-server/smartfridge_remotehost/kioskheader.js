@@ -1,0 +1,1 @@
+// JavaScript Documentfunction kiosk_header(){	// calling php page to set session variable"use strict"; 	$.ajax({		url: "kioskheader.php",		}		);	}

@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Purpose}{3}
+\contentsline {subsection}{\numberline {1.2}Scope}{3}
+\contentsline {section}{\numberline {2}Design Overview}{3}
+\contentsline {subsection}{\numberline {2.1}Description of Problem}{3}
+\contentsline {subsection}{\numberline {2.2}Technologies Used}{3}
+\contentsline {subsection}{\numberline {2.3}System Features}{3}
+\contentsline {subsubsection}{\numberline {2.3.1}Bulk Update, and Generalized Inventory}{3}
+\contentsline {subsubsection}{\numberline {2.3.2}Nutritional Recommendation}{3}
+\contentsline {subsubsection}{\numberline {2.3.3}Waste Approximation \& Energy Saving}{3}

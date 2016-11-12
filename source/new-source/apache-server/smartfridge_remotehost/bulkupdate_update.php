@@ -1,0 +1,1 @@
+<?php session_start();?><!doctype html><html><head><meta charset="UTF-8"><title>Untitled</title><script src="bulkupdate.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script></head><body>Hello<script> bulkUpdate_Function(1,2,3,4,5,6,7,8,10,11,12);</script></body></html>

@@ -1,0 +1,38 @@
+\documentclass{paper}
+\usepackage{bm,amsmath,amsthm,multicol}
+
+\newtheorem*{defn}{\underline{Definition}}
+\newtheorem*{rem}{\underline{Remark}}
+
+\title{$\bm{\S}$ 4.2: Logarithmic Functions}
+\everymath{\displaystyle}
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+\begin{defn}
+	\textbf{Logarithmic functions} are the inverses of exponential functions. Hence, for $a>0$ and $a\neq1$, the logarithmic function with base $a$ is denoted $$f(x)=\log_a(x).$$ 
+	where $y=\log_a(x)$ if and only if $b^a=x.$ 
+\end{defn}
+
+\begin{rem}
+	Both logarithmic and exponential functions are one-to-one. For a one-to-one function, $f(x)$, if there are $x_1$, $x_2$ such that $f(x_1)$ and $f(x_2)$ are defined, and $f(x_1)=f(x_2)$, then $x_1=x_2$.
+\end{rem}
+
+
+
+
+\noindent \textbf{Properties of Logarithms.} Let $D=(0,1)\cup(1,\infty)$ and let $a,b\in D$, then the following properties hold for real numbers $x$ and $y$:
+
+\begin{enumerate}
+	\item $\log_a(a)=1$
+	\item $\log_a(1)=0$
+	\item $\log_a(0)$ is undefined
+	\item $a^{\log_a(x)}=x$
+	\item $\log_a(x^y)=y\log_a(x)$
+	\item $\log_a\left(\frac{1}{x}\right)=-\log_a(x)$
+	\item $\log_a(xy)=\log_a(x)+\log_a(y)$
+	\item $\log_a\left(\frac{x}{y}\right)=\log_a(x)-\log_a(y)$
+	\item $\log_b(x)=\frac{\log_a(x)}{\log_a(b)}=\frac{\ln(x)}{\ln(b)}$ (change of base)
+
+\end{enumerate}
+\end{document}
